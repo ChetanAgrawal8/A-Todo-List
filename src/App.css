@@ -1,0 +1,204 @@
+.main{
+  position: absolute;
+  left: 800px;
+  top: 400px;
+  background-color: bisque;
+}
+
+
+
+
+/* Header Container with Glassmorphism */
+.glass-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 1200px;
+  
+  /* Glass Effect Properties */
+  background: rgba(255, 255, 255, 0.05); /* Very light white */
+  backdrop-filter: blur(16px); /* Frosted glass blur */
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle white border */
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  
+  color: white;
+  z-index: 10;
+  position: relative;
+}
+
+/* Left Side - Logo */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+  color: black;
+}
+.logo-text span {
+  font-weight: 300;
+}
+
+/* Right Side - Actions */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Search Bar */
+.search-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 12px;
+  color: rgb(6, 2, 2);
+  outline: none;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(22, 7, 7, 0.5);
+}
+
+.search-input:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(23, 21, 21, 0.4);
+}
+
+/* Add Task Button */
+.add-task-btn {
+  color: #023854;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-task-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(110, 231, 183, 0.4);
+}
+
+
+
+
+
+
+
+/* Container aur List Setup */
+.todo-container {
+  width: 25%;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Base Glassmorphism (Single Color) */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 25px;
+  border-radius: 16px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Unified Glass Effect Properties */
+  background: rgba(255, 255, 255, 0.05); /* Halka white tint */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Soft white border */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.todo-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.08); /* Hover par thoda aur bright */
+}
+
+/* Shine Hover Effect (Premium look ke liye) */
+.todo-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.06), transparent);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.todo-item:hover::before {
+  left: 150%;
+}
+
+/* Andar ke elements ki styling */
+.task-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #71adf1; /* Halka green tick ke liye */
+}
+
+.task-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #023854;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: rgba(12, 4, 4, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.5);
+}
